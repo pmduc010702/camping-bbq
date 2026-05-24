@@ -23,6 +23,7 @@ Tất cả nội dung đều ở folder `data/`. Sửa file → save → browser
 |---|---|
 | Hotline, tagline, mô tả thương hiệu | `data/settings.js` |
 | Combo (tên, giá, thành phần) | `data/combos.js` |
+| **Giá lẻ từng loại thịt** | **`data/meats.js`** |
 | Đánh giá khách | `data/reviews.js` |
 | Câu hỏi FAQ | `data/faqs.js` |
 | Đồ ăn kèm, quy trình, marquee, ảnh gallery | `data/content.js` |

@@ -12,6 +12,20 @@ public/images/
 │   ├── set-349.jpg
 │   └── set-649.jpg
 │
+├── meats/                     ← Ảnh từng loại thịt giá lẻ
+│   ├── ba-chi-heo.jpg
+│   ├── de-suon-bo.jpg
+│   ├── ba-chi-bo-my.jpg
+│   └── loi-vai-bo.jpg
+│
+├── sides/                     ← Ảnh đồ ăn kèm
+│   ├── rau-xa-lach.jpg
+│   ├── dua-leo.jpg
+│   ├── bap-my.jpg
+│   ├── dau-bap.jpg
+│   ├── xot-uop-thit.jpg
+│   └── nuoc-cham.jpg
+│
 ├── gallery/                   ← Ảnh khách đã trải nghiệm
 │   ├── 1.jpg
 │   ├── 2.jpg

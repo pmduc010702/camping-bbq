@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Clock, ArrowRight, Send, CheckCircle2, Users } from 'lucide-react';
 import { combos } from '../data/combos';
 import { HOTLINE, ZALO_URL, MESSENGER_URL } from '../data/settings';
+import { useToast } from '../lib/toast';
 import OrderSuccessModal from './OrderSuccessModal';
 
 export default function OrderForm() {
   const today = new Date().toISOString().split('T')[0];
+  const { showToast } = useToast();
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -16,7 +18,6 @@ export default function OrderForm() {
     note: '',
   });
   const [showModal, setShowModal] = useState(false);
-  const [copiedFor, setCopiedFor] = useState(null); // 'zalo' | 'messenger' | 'sms' | 'copy' | null
 
   const handleChange = (key) => (e) => setForm({ ...form, [key]: e.target.value });
 
@@ -62,27 +63,21 @@ Camping BBQ ơi, xác nhận giúp mình nhé! 🙏`;
     }
   };
 
-  const flashCopiedFor = (key, openUrl) => {
-    setCopiedFor(key);
-    setTimeout(() => setCopiedFor(null), 2500);
-    if (openUrl) {
-      setTimeout(() => window.open(openUrl, '_blank'), 300);
-    }
-  };
-
   const copyAndOpenZalo = async () => {
-    await copyToClipboard();
-    flashCopiedFor('zalo', ZALO_URL);
+    const ok = await copyToClipboard();
+    showToast(ok ? '✓ Đã copy nội dung. Dán vào khung chat Zalo.' : 'Không copy được. Bạn copy thủ công nhé.', ok ? 'success' : 'error');
+    setTimeout(() => window.open(ZALO_URL, '_blank'), 300);
   };
 
   const copyAndOpenMessenger = async () => {
-    await copyToClipboard();
-    flashCopiedFor('messenger', MESSENGER_URL);
+    const ok = await copyToClipboard();
+    showToast(ok ? '✓ Đã copy nội dung. Dán vào khung chat Messenger.' : 'Không copy được. Bạn copy thủ công nhé.', ok ? 'success' : 'error');
+    setTimeout(() => window.open(MESSENGER_URL, '_blank'), 300);
   };
 
   const copyOnly = async () => {
-    await copyToClipboard();
-    flashCopiedFor('copy', null);
+    const ok = await copyToClipboard();
+    showToast(ok ? '✓ Đã copy. Paste đi đâu cũng được.' : 'Không copy được. Vui lòng chọn nội dung và copy thủ công.', ok ? 'success' : 'error');
   };
 
   const sendSMS = () => {
@@ -266,7 +261,6 @@ Camping BBQ ơi, xác nhận giúp mình nhé! 🙏`;
           onMessenger={copyAndOpenMessenger}
           onSMS={sendSMS}
           onCopy={copyOnly}
-          copiedFor={copiedFor}
         />
       )}
     </section>

@@ -6,6 +6,22 @@ import { features } from '../data/content';
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden">
+      {/* Banner background image */}
+      {BRAND.heroBanner && (
+        <div className="absolute inset-0 -z-20">
+          <img
+            src={BRAND.heroBanner}
+            alt=""
+            className="w-full h-full object-cover"
+            onError={(e) => { e.target.style.display = 'none'; }}
+          />
+          {/* Multi-layer overlay to keep text readable on any image */}
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0c0a09] via-[#0c0a09]/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0c0a09]/40 via-transparent to-[#0c0a09]" />
+        </div>
+      )}
+
       {/* Background glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-red-700/20 rounded-full blur-[120px]" />
@@ -13,11 +29,13 @@ export default function Hero() {
         <div className="absolute inset-0 grain opacity-40" />
       </div>
 
-      {/* Smoke decoration */}
-      <svg className="absolute top-20 right-10 w-64 h-64 opacity-10 hidden lg:block" viewBox="0 0 200 200" fill="none">
-        <path d="M30 180 Q 40 120, 80 110 Q 130 100, 120 50 Q 110 20, 150 30" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
-        <path d="M60 180 Q 70 130, 100 120 Q 140 110, 140 70 Q 140 40, 170 50" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
-      </svg>
+      {/* Smoke decoration (chỉ hiện khi không có banner để không rối) */}
+      {!BRAND.heroBanner && (
+        <svg className="absolute top-20 right-10 w-64 h-64 opacity-10 hidden lg:block" viewBox="0 0 200 200" fill="none">
+          <path d="M30 180 Q 40 120, 80 110 Q 130 100, 120 50 Q 110 20, 150 30" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M60 180 Q 70 130, 100 120 Q 140 110, 140 70 Q 140 40, 170 50" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
+        </svg>
+      )}
 
       <div className="max-w-7xl mx-auto px-5 md:px-8 w-full relative">
         <div className="fade-up" style={{ animationDelay: '0.1s' }}>

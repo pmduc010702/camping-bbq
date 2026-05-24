@@ -1,6 +1,7 @@
 // 4 combo BBQ.
-// Khi có ảnh thật, đặt file vào public/images/combos/ rồi điền `image` ở dưới.
-// Nếu `image: null`, card sẽ dùng gradient màu thay cho ảnh.
+// Ảnh đang dùng URL Unsplash làm placeholder (chụp BBQ chung).
+// Khi có ảnh chụp combo thật, đặt file vào public/images/combos/
+// rồi đổi `image` thành '/images/combos/set-XXX.jpg'.
 
 export const combos = [
   {
@@ -16,7 +17,7 @@ export const combos = [
       { name: 'Dẻ sườn bò', weight: '200g' },
       { name: 'Ba chỉ bò Mỹ', weight: '200g' },
     ],
-    image: null, // → '/images/combos/set-199.jpg' khi có ảnh
+    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
     gradient: 'from-amber-700 via-orange-700 to-red-800',
     isPopular: false,
   },
@@ -33,7 +34,7 @@ export const combos = [
       { name: 'Ba chỉ bò Mỹ', weight: '200g' },
       { name: 'Lõi vai bò', weight: '200g' },
     ],
-    image: null, // → '/images/combos/set-249.jpg'
+    image: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80',
     gradient: 'from-red-700 via-rose-800 to-zinc-900',
     isPopular: false,
   },
@@ -52,7 +53,7 @@ export const combos = [
       { name: 'Ba chỉ bò Mỹ', weight: '200g' },
       { name: 'Lõi vai bò', weight: '200g' },
     ],
-    image: null, // → '/images/combos/set-349.jpg'
+    image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80',
     gradient: 'from-orange-600 via-red-700 to-red-900',
   },
   {
@@ -69,7 +70,7 @@ export const combos = [
       { name: 'Ba chỉ bò Mỹ', weight: '400g' },
       { name: 'Lõi vai bò', weight: '400g' },
     ],
-    image: null, // → '/images/combos/set-649.jpg'
+    image: 'https://images.unsplash.com/photo-1432139509613-5c4255815697?w=800&q=80',
     gradient: 'from-red-800 via-zinc-800 to-zinc-950',
     isPopular: false,
   },

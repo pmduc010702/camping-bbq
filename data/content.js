@@ -2,9 +2,36 @@
 import { Beef, Clock, Snowflake, Truck } from 'lucide-react';
 
 // ====== ĐỒ ĂN KÈM ======
+// Khi có ảnh thật, đặt vào public/images/sides/ rồi đổi `image` thành '/images/sides/...'
 export const sideItems = [
-  'Rau xà lách', 'Dưa leo', 'Bắp Mỹ', 'Đậu bắp', 'Xốt ướp thịt', 'Nước chấm'
+  {
+    name: 'Rau xà lách',
+    image: 'https://file.hstatic.net/200000680207/file/rau_xa_lach_27f3d8e6f0b24dbf8569ead2e5802e32_grande.jpg?w=400&q=80',
+  },
+  {
+    name: 'Dưa leo',
+    image: 'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=400&q=80',
+  },
+  {
+    name: 'Bắp Mỹ',
+    image: 'https://vcaf.com.vn/wp-content/uploads/2024/05/Bap-My-1.jpg?w=400&q=80',
+  },
+  {
+    name: 'Đậu bắp',
+    image: 'https://images2.thanhnien.vn/528068263637045248/2023/5/11/3-dau-bap-shutterstock-1683781310622182487488.jpg?w=400&q=80',
+  },
+  {
+    name: 'Xốt ướp thịt',
+    image: 'https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=400&q=80',
+  },
+  {
+    name: 'Nước chấm',
+    image: 'https://images.unsplash.com/photo-1607301406259-dfb186e15de8?w=400&q=80',
+  },
 ];
+
+// Helper: trả về mảng chỉ tên (dùng cho ComboModal hiển thị dạng chip)
+export const sideItemNames = sideItems.map((s) => s.name);
 
 // ====== TÍNH NĂNG (Hero bottom bar) ======
 export const features = [

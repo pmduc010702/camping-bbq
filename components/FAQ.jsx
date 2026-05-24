@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { faqs } from '../data/faqs';
-import { HOTLINE, ZALO_URL } from '../data/settings';
+import { HOTLINE, ZALO_URL, MESSENGER_URL } from '../data/settings';
 
 export default function FAQ() {
   const [openIdx, setOpenIdx] = useState(0);
@@ -54,10 +54,14 @@ export default function FAQ() {
           Không thấy câu trả lời?{' '}
           <a href={`tel:${HOTLINE}`} className="text-red-400 hover:text-red-300 font-bold">
             Gọi tụi mình
-          </a>{' '}
-          hoặc{' '}
+          </a>
+          ,{' '}
           <a href={ZALO_URL} className="text-red-400 hover:text-red-300 font-bold">
             nhắn Zalo
+          </a>{' '}
+          hoặc{' '}
+          <a href={MESSENGER_URL} className="text-red-400 hover:text-red-300 font-bold">
+            Messenger
           </a>
           .
         </div>

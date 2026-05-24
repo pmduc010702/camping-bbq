@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { X, Flame, Beef, Users, Phone } from 'lucide-react';
-import { ZaloIcon } from '../icons';
-import { HOTLINE, ZALO_URL } from '../data/settings';
-import { sideItems } from '../data/content';
+import { ZaloIcon, MessengerIcon } from '../icons';
+import { HOTLINE, ZALO_URL, MESSENGER_URL } from '../data/settings';
+import { sideItemNames } from '../data/content';
 
 export default function ComboModal({ combo, onClose }) {
   useEffect(() => {
@@ -77,7 +77,7 @@ export default function ComboModal({ combo, onClose }) {
           <div className="mb-7">
             <div className="text-xs font-bold tracking-[0.2em] text-red-500 mb-3">— KÈM THEO</div>
             <div className="flex flex-wrap gap-2">
-              {sideItems.map((s, i) => (
+              {sideItemNames.map((s, i) => (
                 <span key={i} className="text-xs bg-stone-900 border border-stone-800 px-3 py-1.5 rounded-full text-stone-300">
                   {s}
                 </span>
@@ -85,18 +85,32 @@ export default function ComboModal({ combo, onClose }) {
             </div>
           </div>
 
-          <div className="flex gap-3 sticky bottom-0">
+          <div className="grid grid-cols-3 gap-2 sticky bottom-0">
             <a
               href={`tel:${HOTLINE}`}
-              className="flex-1 inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-500 px-5 py-3.5 rounded-full font-bold transition"
+              className="inline-flex items-center justify-center gap-1.5 bg-red-600 hover:bg-red-500 px-3 py-3.5 rounded-full font-bold text-sm transition"
             >
-              <Phone size={16} /> Gọi đặt
+              <Phone size={15} />
+              <span className="hidden sm:inline">Gọi</span>
             </a>
             <a
               href={ZALO_URL}
-              className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 px-5 py-3.5 rounded-full font-bold transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 bg-blue-600 hover:bg-blue-500 px-3 py-3.5 rounded-full font-bold text-sm transition"
             >
-              <ZaloIcon size={16} /> Nhắn Zalo
+              <ZaloIcon size={15} />
+              Zalo
+            </a>
+            <a
+              href={MESSENGER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 bg-gradient-to-br from-blue-500 to-purple-600 hover:opacity-90 px-3 py-3.5 rounded-full font-bold text-sm transition"
+            >
+              <MessengerIcon size={15} />
+              <span className="hidden sm:inline">Messenger</span>
+              <span className="sm:hidden">FB</span>
             </a>
           </div>
         </div>

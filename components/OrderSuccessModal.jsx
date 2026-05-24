@@ -3,15 +3,7 @@ import { X, CheckCircle2, MessageSquare, Copy, Phone } from 'lucide-react';
 import { ZaloIcon, MessengerIcon } from '../icons';
 import { HOTLINE, HOTLINE_DISPLAY } from '../data/settings';
 
-export default function OrderSuccessModal({
-  message,
-  onClose,
-  onZalo,
-  onMessenger,
-  onSMS,
-  onCopy,
-  copiedFor, // 'zalo' | 'messenger' | 'sms' | 'copy' | null
-}) {
+export default function OrderSuccessModal({ message, onClose, onZalo, onMessenger, onSMS, onCopy }) {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => { document.body.style.overflow = ''; };
@@ -19,7 +11,7 @@ export default function OrderSuccessModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm fade-in"
       onClick={onClose}
     >
       <div
@@ -29,6 +21,7 @@ export default function OrderSuccessModal({
         <button
           onClick={onClose}
           className="absolute top-4 right-4 w-9 h-9 rounded-full bg-stone-800 hover:bg-stone-700 flex items-center justify-center z-10"
+          aria-label="Đóng"
         >
           <X size={16} />
         </button>
@@ -50,21 +43,19 @@ export default function OrderSuccessModal({
             </pre>
           </div>
 
-          {/* Primary: 2 cột Zalo + Messenger */}
+          {/* Primary: Zalo + Messenger */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
             <button
               onClick={onZalo}
               className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 px-4 py-3.5 rounded-full font-bold text-sm transition"
             >
-              <ZaloIcon size={16} />
-              {copiedFor === 'zalo' ? '✓ Dán vào Zalo' : 'Mở Zalo'}
+              <ZaloIcon size={16} /> Mở Zalo
             </button>
             <button
               onClick={onMessenger}
               className="flex items-center justify-center gap-2 bg-gradient-to-br from-blue-500 to-purple-600 hover:opacity-90 px-4 py-3.5 rounded-full font-bold text-sm transition"
             >
-              <MessengerIcon size={16} />
-              {copiedFor === 'messenger' ? '✓ Dán vào Messenger' : 'Mở Messenger'}
+              <MessengerIcon size={16} /> Mở Messenger
             </button>
           </div>
 
@@ -74,15 +65,13 @@ export default function OrderSuccessModal({
               onClick={onSMS}
               className="flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-700 px-4 py-3 rounded-full font-bold text-sm transition"
             >
-              <MessageSquare size={15} />
-              SMS
+              <MessageSquare size={15} /> SMS
             </button>
             <button
               onClick={onCopy}
               className="flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-700 px-4 py-3 rounded-full font-bold text-sm transition"
             >
-              <Copy size={15} />
-              {copiedFor === 'copy' ? 'Đã copy ✓' : 'Chỉ copy'}
+              <Copy size={15} /> Chỉ copy
             </button>
           </div>
 
@@ -95,13 +84,7 @@ export default function OrderSuccessModal({
             Hoặc gọi luôn {HOTLINE_DISPLAY}
           </a>
 
-          {copiedFor && copiedFor !== 'copy' && (
-            <p className="text-[11px] text-center text-green-400 mt-3">
-              ✓ Nội dung đã copy. Mở khung chat và dán (paste) để gửi đơn.
-            </p>
-          )}
-
-          <p className="text-[11px] text-center text-stone-500 mt-3">
+          <p className="text-[11px] text-center text-stone-500 mt-4">
             Tụi mình sẽ phản hồi xác nhận trong vòng 5 phút trong giờ hoạt động (9h–21h).
           </p>
         </div>

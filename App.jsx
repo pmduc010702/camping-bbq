@@ -7,8 +7,10 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import MenuSection from './components/MenuSection';
+import MeatPrices from './components/MeatPrices';
 import SidesSection from './components/SidesSection';
 import HowItWorks from './components/HowItWorks';
+import About from './components/About';
 import OrderForm from './components/OrderForm';
 import Reviews from './components/Reviews';
 import Gallery from './components/Gallery';
@@ -36,8 +38,10 @@ export default function App() {
       <Hero />
       <Marquee />
       <MenuSection />
+      <MeatPrices />
       <SidesSection />
       <HowItWorks />
+      <About />
       <OrderForm />
       <Reviews />
       <Gallery />
