@@ -48,7 +48,7 @@ export default function About() {
               <div className="font-display font-black text-2xl md:text-3xl text-white leading-tight mb-3 drop-shadow-lg">
                 "Mở khay ra là nướng được — không hơn, không kém."
               </div>
-              <div className="text-xs text-stone-300">— Chị Hèng, bếp trưởng</div>
+              <div className="text-xs text-stone-300">— Chị Hiền, bếp trưởng</div>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ export default function About() {
                 Chuyện thường: rủ nhau đi nướng, đến nơi mới phát hiện thịt khô, ướp không thấm, hoặc thiếu loại này loại kia. Cuộc vui không trọn vẹn.
               </p>
               <p className="text-stone-200">
-                Tụi mình quyết định làm 1 shop chuyên cho dân cắm trại + tiệc tại nhà — <strong className="text-white">tươi, ướp đúng vị, đóng khay sẵn</strong>.
+                Tụi mình quyết định làm 1 shop chuyên cho dân cắm trại + tiệc tại nhà — <strong className="text-white">ướp đúng vị, đóng khay sẵn</strong>.
               </p>
             </div>
 

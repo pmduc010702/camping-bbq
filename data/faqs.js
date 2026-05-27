@@ -30,6 +30,9 @@ export const faqs = [
   },
   {
     q: 'Đặt nhiều có ưu đãi không?',
-    a: 'Đơn từ 1 triệu giảm 5%. Đặt từ 8 phần món lẻ giảm 10%. Khách đặt lần thứ 5 trở lên tặng kèm 1 chai xốt. Mã giới thiệu bạn bè: cả hai bên giảm 20K cho đơn tiếp theo.',
+    a: `Đơn từ 1 triệu giảm 100K.
+Đặt từ 8 phần món lẻ giảm 5%.
+Khách đặt lần thứ 3 trở lên tặng thêm 200gr ba chỉ heo hoặc 200gr dẻ sườn bò.
+Mã giới thiệu bạn bè: cả hai bên giảm 20K cho đơn tiếp theo.`,
   },
 ];

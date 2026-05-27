@@ -21,11 +21,11 @@ export const sideItems = [
     image: '/images/sides/dau-bap.png',
   },
   {
-    name: 'Xốt ướp thịt',
+    name: 'Nước chấm',
     image: '/images/sides/xot-uop-thit.png',
   },
   {
-    name: 'Nước chấm',
+    name: 'Nước ướp thịt',
     image: '/images/sides/nuoc-cham.png',
   },
 ];
@@ -44,13 +44,13 @@ export const features = [
 // ====== QUY TRÌNH ĐẶT HÀNG (3 bước) ======
 export const steps = [
   { num: '01', title: 'ĐẶT QUA ZALO/GỌI', desc: 'Chọn set ưng ý, gọi hoặc nhắn Zalo. Báo địa điểm, giờ giao.' },
-  { num: '02', title: 'BẾP CHUẨN BỊ',     desc: 'Thịt được cắt, ướp tươi trong 3–4 tiếng. Đóng khay sạch sẽ.' },
+  { num: '02', title: 'BẾP CHUẨN BỊ',     desc: 'Thịt được cắt, ướp trong 3–4 tiếng. Đóng khay sạch sẽ.' },
   { num: '03', title: 'MỞ KHAY NƯỚNG',    desc: 'Shipper giao tới nơi. Bạn chỉ việc mở khay, lên vỉ, thưởng thức.' },
 ];
 
 // ====== CHỮ CHẠY NGANG (Marquee) ======
 export const marqueeItems = [
-  'THỊT TƯƠI MỖI NGÀY',
+  'THỊT NGON MỖI NGÀY',
   'ƯỚP CHUẨN VỊ',
   'SHIP TẬN NƠI',
   'MỞ KHAY LÀ NƯỚNG',
