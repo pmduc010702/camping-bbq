@@ -12,7 +12,7 @@ export default function SidesSection() {
             Mọi set đều bao gồm
           </h2>
           <p className="text-sm text-stone-400">
-            6 món ăn kèm tươi — không phụ phí, không order thêm
+            6 món ăn kèm — không phụ phí, không order thêm
           </p>
         </div>
 

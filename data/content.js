@@ -1,32 +1,32 @@
 // Các nội dung phụ của site.
-import { Beef, Clock, Snowflake, Truck } from 'lucide-react';
+import { Beef, Clock, Sparkles, Truck } from 'lucide-react';
 
 // ====== ĐỒ ĂN KÈM ======
-// Khi có ảnh thật, đặt vào public/images/sides/ rồi đổi `image` thành '/images/sides/...'
+// Ảnh local: public/images/sides/
 export const sideItems = [
   {
     name: 'Rau xà lách',
-    image: 'https://file.hstatic.net/200000680207/file/rau_xa_lach_27f3d8e6f0b24dbf8569ead2e5802e32_grande.jpg?w=400&q=80',
+    image: '/images/sides/rau-xa-lach.png',
   },
   {
     name: 'Dưa leo',
-    image: 'https://images.unsplash.com/photo-1604977042946-1eecc30f269e?w=400&q=80',
+    image: '/images/sides/dua-leo.png',
   },
   {
     name: 'Bắp Mỹ',
-    image: 'https://vcaf.com.vn/wp-content/uploads/2024/05/Bap-My-1.jpg?w=400&q=80',
+    image: '/images/sides/bap-my.png',
   },
   {
     name: 'Đậu bắp',
-    image: 'https://images2.thanhnien.vn/528068263637045248/2023/5/11/3-dau-bap-shutterstock-1683781310622182487488.jpg?w=400&q=80',
+    image: '/images/sides/dau-bap.png',
   },
   {
     name: 'Xốt ướp thịt',
-    image: 'https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=400&q=80',
+    image: '/images/sides/xot-uop-thit.png',
   },
   {
     name: 'Nước chấm',
-    image: 'https://images.unsplash.com/photo-1607301406259-dfb186e15de8?w=400&q=80',
+    image: '/images/sides/nuoc-cham.png',
   },
 ];
 
@@ -35,10 +35,10 @@ export const sideItemNames = sideItems.map((s) => s.name);
 
 // ====== TÍNH NĂNG (Hero bottom bar) ======
 export const features = [
-  { icon: Beef,      label: 'Thịt cắt dày',     sub: 'theo từng lát – dễ nướng' },
-  { icon: Clock,     label: 'Đặt trước 3–4h',   sub: 'để bếp chuẩn bị ngon nhất' },
-  { icon: Snowflake, label: 'Bảo quản 0–4°C',   sub: 'nếu chưa dùng ngay' },
-  { icon: Truck,     label: 'Ship tận nơi',     sub: 'mở khay là nướng' },
+  { icon: Beef,      label: 'Thịt cắt dày',         sub: 'theo từng lát – dễ nướng' },
+  { icon: Clock,     label: 'Đặt trước 3–4h',       sub: 'để bếp chuẩn bị ngon nhất' },
+  { icon: Sparkles,  label: 'Ướp mới mỗi ngày',     sub: 'không hàng đông lạnh' },
+  { icon: Truck,     label: 'Ship tận nơi',         sub: 'mở khay là nướng' },
 ];
 
 // ====== QUY TRÌNH ĐẶT HÀNG (3 bước) ======

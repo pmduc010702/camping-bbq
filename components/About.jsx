@@ -1,12 +1,7 @@
 import React from 'react';
-import { Beef, Flame, Package } from 'lucide-react';
+import { Flame, Package, Truck } from 'lucide-react';
 
 const principles = [
-  {
-    icon: Beef,
-    title: 'Tươi mỗi ngày',
-    desc: 'Nhập sáng, ướp trưa, ship chiều. Không có thịt qua đêm hay đông lạnh lâu ngày.',
-  },
   {
     icon: Flame,
     title: 'Công thức riêng',
@@ -16,6 +11,11 @@ const principles = [
     icon: Package,
     title: 'Mở khay là nướng',
     desc: 'Đóng gói chuẩn theo từng loại, không cần sơ chế. Mở khay lên vỉ trong 30 giây.',
+  },
+  {
+    icon: Truck,
+    title: 'Ship đúng hẹn',
+    desc: 'Giao đúng giờ bạn báo. Đặt cắm trại đi xa cũng yên tâm tới đúng địa điểm.',
   },
 ];
 
@@ -48,7 +48,7 @@ export default function About() {
               <div className="font-display font-black text-2xl md:text-3xl text-white leading-tight mb-3 drop-shadow-lg">
                 "Mở khay ra là nướng được — không hơn, không kém."
               </div>
-              <div className="text-xs text-stone-300">— Chị Hằng, bếp trưởng</div>
+              <div className="text-xs text-stone-300">— Chị Hèng, bếp trưởng</div>
             </div>
           </div>
 

@@ -12,7 +12,7 @@ export const MESSENGER_URL = '#';
 export const BRAND = {
   name: 'CAMPING.BBQ',
   tagline: 'Mở khay là nướng ngay',
-  description: 'Set thịt tươi cắt sẵn, ướp chuẩn vị, kèm rau & xốt — ship tận điểm cắm trại, sân vườn, ban công nhà bạn.',
+  description: 'Set thịt cắt sẵn, ướp chuẩn vị, kèm rau & xốt — ship tận điểm cắm trại, sân vườn, ban công nhà bạn.',
 
   // Banner Hero — ảnh nền section đầu trang.
   // Đang dùng URL Unsplash placeholder. Thay bằng ảnh thật:

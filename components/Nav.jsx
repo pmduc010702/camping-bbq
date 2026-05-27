@@ -3,6 +3,7 @@ import { Phone, Flame, Menu as MenuIcon, X } from 'lucide-react';
 import { ZaloIcon, MessengerIcon } from '../icons';
 import { HOTLINE, HOTLINE_DISPLAY, ZALO_URL, MESSENGER_URL, BRAND } from '../data/settings';
 import { socials } from '../data/socials';
+import Logo from './Logo';
 
 const navLinks = [
   { href: '#menu',    label: 'Combo' },
@@ -19,13 +20,8 @@ export default function Nav() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-stone-950/80 border-b border-stone-800/50">
-        <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between gap-3">
-          <a href="#" className="flex items-center gap-2 shrink-0">
-            <Flame size={22} className="text-red-500 flicker" strokeWidth={2.5} />
-            <span className="font-display font-black text-base md:text-lg tracking-tight">
-              {BRAND.name.split('.')[0]}<span className="text-red-500">.</span>{BRAND.name.split('.')[1]}
-            </span>
-          </a>
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-3 flex items-center justify-between gap-3">
+          <Logo size="lg" />
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-7 text-sm font-medium text-stone-300">
@@ -81,11 +77,15 @@ function MobileDrawer({ isOpen, onClose }) {
       {/* Drawer panel */}
       <div className="absolute top-0 right-0 bottom-0 w-[85vw] max-w-sm bg-stone-950 border-l border-stone-800 flex flex-col slide-in-right">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-stone-800">
-          <div className="flex items-center gap-2">
-            <Flame size={20} className="text-red-500" strokeWidth={2.5} />
-            <span className="font-display font-black text-base tracking-tight">
-              {BRAND.name.split('.')[0]}<span className="text-red-500">.</span>{BRAND.name.split('.')[1]}
+        <div className="flex items-center justify-between px-5 py-4 border-b border-stone-800">
+          <div className="flex items-center gap-2.5">
+            <img
+              src="/images/logo.jpg"
+              alt="Camping BBQ"
+              className="h-10 w-10 object-contain rounded-md"
+            />
+            <span className="font-display font-black text-sm tracking-tight">
+              CAMPING<span className="text-red-500">.</span>BBQ
             </span>
           </div>
           <button

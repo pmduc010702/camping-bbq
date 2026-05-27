@@ -60,7 +60,7 @@ export const combos = [
     id: 'set-649',
     price: 649,
     name: 'Set 649K',
-    totalWeight: '1.8KG thịt',
+    totalWeight: '1.6KG thịt',
     serving: '4–6 người',
     tag: 'GIA ĐÌNH',
     description: 'Đủ lớn cho team đông, tiệc cuối tuần hoặc cắm trại qua đêm.',

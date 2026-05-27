@@ -13,7 +13,7 @@ export default function Gallery() {
             </h2>
           </div>
           <div className="text-sm text-stone-400">
-            Chụp ảnh đẹp → tag tụi mình → giảm 30K đơn sau
+            Chụp ảnh đẹp → tag tụi mình → giảm 5% hoặc 20K đơn sau
           </div>
         </div>
 
