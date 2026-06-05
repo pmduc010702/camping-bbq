@@ -64,10 +64,8 @@ export const marqueeItems = [
 //
 // Hiện đang dùng URL Unsplash làm placeholder để site đẹp ngay.
 export const galleryImages = [
-  'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
-  'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
-  'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=800&q=80',
-  'https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80',
-  'https://images.unsplash.com/photo-1574484284002-952d92456975?w=800&q=80',
-  'https://images.unsplash.com/photo-1432139509613-5c4255815697?w=800&q=80',
+  '/images/gallery/glr2.jpg',
+  '/images/gallery/glr1.jpg',
+  '/images/gallery/glr3.jpg',
+
 ];
