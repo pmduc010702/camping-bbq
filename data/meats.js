@@ -13,7 +13,7 @@ export const individualMeats = [
   {
     id: 'de-suon-bo',
     name: 'Dẻ sườn bò',
-    price: 75,
+    price: 70,
     weight: '200g',
     tag: 'BÁN CHẠY',
     description: 'Phần thịt mềm sát xương, ngọt tự nhiên.',
